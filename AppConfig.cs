@@ -1,7 +1,5 @@
 public class AppConfig
 {
-    public string BingApiKey { get; set; } = string.Empty;
-
     public IEnumerable<PluginConfig> Plugins { get; set; } = Enumerable.Empty<PluginConfig>();
 }
 
