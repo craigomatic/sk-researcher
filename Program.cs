@@ -11,10 +11,17 @@ var embeddingConfig = configBuilder.GetRequiredSection("EmbeddingConfig").Get<Mo
 var completionConfig = configBuilder.GetRequiredSection("CompletionConfig").Get<ModelConfig>();
 var appConfig = configBuilder.GetRequiredSection("AppConfig").Get<AppConfig>();
 
-var sk = Kernel.Builder.Configure(embeddingConfig, completionConfig);
+var scratchPad = new ScratchPad();
+
+var sk = Kernel.Builder.WithLogger(new ScratchPadLogger { ScratchPad = scratchPad }).Configure(embeddingConfig, completionConfig);
 await sk.LoadResearchPluginsAsync(appConfig!);
 
-var researchRequest = "I would like to learn about superconductivity at room temperature and LK-99. Please help me out with an entry level understanding of why this potential discovery may be significant. The more detail you are able to provide the better.";
+scratchPad.Topic = "superconductivity at room temperature and LK-99, and why this potential discovery may be significant.";
+
+var researchRequest = $"I would like to learn about {scratchPad.Topic}" +
+    "The more detail you are able to provide the better. " +
+    "If you do a web search, don't just take the summary from the search results, scrape each linked page and summarise for best context.";
+
 var researchContext = sk.CreateNewContext();
 
 var stepwisePlanner = new StepwisePlanner(sk);
