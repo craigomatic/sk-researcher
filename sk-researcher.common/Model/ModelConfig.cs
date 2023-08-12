@@ -1,4 +1,4 @@
-public class ModelConfig
+﻿public class ModelConfig
 {
     public const string OpenAI = "OPENAI";
     public const string AzureOpenAI = "AZUREOPENAI";
@@ -25,5 +25,5 @@ public class ModelConfig
         }
 
         return false;
-    }   
+    }
 }

@@ -1,6 +1,6 @@
 public class AppConfig
 {
-    public IEnumerable<PluginConfig> Plugins { get; set; } = Enumerable.Empty<PluginConfig>();
+    public List<PluginConfig> Plugins { get; set; } = new();
 }
 
 public class PluginConfig
