@@ -2,7 +2,7 @@
 Using Semantic Kernel to power a research agent that will work on your behalf to research a topic
 
 ## Pre-requisites
-You will Azure OpenAI or OpenAI keys. In addition it's recommended that you have a deployed version of the [websearch-plugin](https://github.com/craigomatic/webscraper-aiplugin/) and [webscraper-plugin](https://github.com/craigomatic/webscraper-aiplugin/) available 
+You will Azure OpenAI or OpenAI keys. In addition it's recommended that you have a deployed version of the [websearch-plugin](https://github.com/craigomatic/websearch-aiplugin/) and [webscraper-plugin](https://github.com/craigomatic/webscraper-aiplugin/) available 
 
 ## Usage
 Assuming you will be running the app locally, enter your keys and the path to the websearch-plugin and webscraper-plugin into appsettings.json (or even better, create a copy of appsettings.json and rename it to appsettings.development.json).
