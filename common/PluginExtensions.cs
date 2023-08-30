@@ -15,7 +15,7 @@ public static class PluginExtensions
             await kernel.ImportAIPluginAsync(
                 plugin.Name,
                 new Uri(plugin.Url),
-                executionParameters: new OpenApiSkillExecutionParameters { IgnoreNonCompliantErrors = true });
+                executionParameters: new OpenApiSkillExecutionParameters { IgnoreNonCompliantErrors = true, EnableDynamicPayload = true });
         }
     }
 }
