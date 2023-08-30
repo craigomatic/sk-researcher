@@ -4,7 +4,7 @@ internal static class ConsoleLogger
 {
     internal static ILogger Logger => LogFactory.CreateLogger<object>();
 
-    private static ILoggerFactory LogFactory => s_loggerFactory.Value;
+    internal static ILoggerFactory LogFactory => s_loggerFactory.Value;
 
     private static readonly Lazy<ILoggerFactory> s_loggerFactory = new(LogBuilder);
 
