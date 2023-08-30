@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "researcher-aiplugin", "aipl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "researcher-app", "app\researcher-app.csproj", "{787E818E-B9DF-47B6-8D6B-2FBD2BDAE493}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "researcher.common", "sk-researcher.common\researcher.common.csproj", "{66C4D1D2-7877-41FC-A4A8-58C34D47F30B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "researcher.common", "common\researcher.common.csproj", "{66C4D1D2-7877-41FC-A4A8-58C34D47F30B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
