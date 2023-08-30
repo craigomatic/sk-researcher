@@ -29,3 +29,31 @@ value: '<plugin url goes here>'
 
 //the next plugin would use the number 2, and so on...
 ```
+
+### For extra fun
+Here are two additional plugins to configure for the researcher to use:
+
+[azblob-aiplugin](https://github.com/craigomatic/azblob-aiplugin)
+
+[worddoc-aiplugin](https://github.com/craigomatic/worddoc-aiplugin)
+
+Then make a slight modification in ResearchService.cs so that instead of:
+
+```csharp
+var researchRequest = $"I would like to learn about {topic}" +
+            "The more detail you are able to provide the better. " +
+            "If you do a web search, don't just take the summary from the search results, scrape each linked page and summarise for best context." +
+            "While the opinion of a journalist is interesting, bias towards original sources where possible.";
+```
+
+You have:
+
+```csharp
+var researchRequest = $"I would like to learn about {topic}" +
+            "The more detail you are able to provide the better. " +
+            "If you do a web search, don't just take the summary from the search results, scrape each linked page and summarise for best context." +
+            "While the opinion of a journalist is interesting, bias towards original sources where possible. " +
+            "Please write your analysis to a Word Document stored on an Azure Blob";
+```
+
+Now when you run the agent, you will be given the URI to a SAS protected blob on Azure, with the analysis contained within :)
